@@ -1,0 +1,194 @@
+@font-face {
+    font-family: kindergarten;
+    src: url("/assets/handwriting.ttf");
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+    font-family: kindergarten;
+} 
+
+
+body {
+    width: 100%;
+    height: 100vh;
+    &:hover {
+        cursor: grab;
+    }
+}
+
+.stats {
+    top: 0;
+    left: 0;
+    padding:2em 4.5em;
+    position: absolute;
+    font-size: 2em;
+}
+
+#settings {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    padding: 1em;
+    color: #fff;
+    font-size: 2em;
+    &:hover {
+        color: #b3b3b3;
+        transition: 0.2s ease-in-out;
+        cursor: pointer;
+    }
+}   
+
+.main-screen {
+    position: absolute;
+    display: flex;
+    background: transparent;
+    justify-content: center;
+    padding-top:2em;
+    align-items:flex-start;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+
+    .title {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .game-text {
+            font-size: 4em;
+            text-align: center;
+            .O {
+                font-size: 6em;
+            }
+        }
+
+        #prompt {
+            display: flex;
+            flex-direction: row;
+            font-size: 3em;
+            #dif {
+                
+                &:after {
+                    content: "|";
+                    color: #a33465;
+                    font-weight: bold;
+                    animation: blink 500ms ease-in-out infinite;
+                    /* change margin to left if language is left to right */
+                    margin-right: 5px;
+                }
+                @keyframes blink {
+                    to {
+                    opacity: 0;
+                    }
+                }
+            }
+            .selection {
+                display:flex;
+                flex-direction: row;
+                &>* {
+                    display: flex;
+                    align-items: center;
+                }
+                i {
+                    font-size: 0.8em;
+                    &:hover {
+                        transform: scale(1.08);
+                        cursor:pointer;
+                    }
+                }
+
+                
+        
+            }
+        }
+        button {
+            padding: 0.3em;
+            font-size: 2.5em;
+            background: transparent;
+            border: none;
+            &:hover {
+                text-decoration: underline;
+                text-decoration-line: line-through;
+                cursor: pointer;
+            }
+        }
+    }
+   
+
+}
+
+
+
+.flexbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    background-image: url("/assets/paper.jpg");
+    
+    
+    
+    
+    .board {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .grid{
+        background-color: transparent;
+        padding: 4em;
+        border: black 3px solid;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &:nth-child(1){
+            border-top: none;
+            border-left: none;
+        }
+        &:nth-child(2){
+            border-top: none;
+        }
+        &:nth-child(3){
+            border-top: none;
+            border-right: none;
+        }
+        &:nth-child(4){
+            border-left: none;
+        }
+        &:nth-child(6){
+            border-right: none;
+        }
+        &:nth-child(7){
+            border-bottom: none;
+            border-left: none;
+        }
+        &:nth-child(8){
+            border-bottom: none;
+        }
+        &:nth-child(9){
+            border-right: none;
+            border-bottom: none;
+        }
+        &:hover {
+            background-color: black;
+            opacity: 0.02;
+            cursor: pointer;
+        }
+    }
+    
+}
+
+@media screen and (max-width:950px) {
+    .stats {
+        top:80%;
+    }
+    
+}
+
+@media screen and (max-height:600px) {
+
+}

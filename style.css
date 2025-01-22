@@ -1,0 +1,177 @@
+@font-face {
+  font-family: kindergarten;
+  src: url("/assets/handwriting.ttf");
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: kindergarten;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+body:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.stats {
+  top: 0;
+  left: 0;
+  padding: 2em 4.5em;
+  position: absolute;
+  font-size: 2em;
+}
+
+#settings {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  color: #fff;
+  font-size: 2em;
+}
+#settings:hover {
+  color: #b3b3b3;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.main-screen {
+  position: absolute;
+  display: flex;
+  background: transparent;
+  justify-content: center;
+  padding-top: 2em;
+  align-items: flex-start;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+}
+.main-screen .title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.main-screen .title .game-text {
+  font-size: 4em;
+  text-align: center;
+}
+.main-screen .title .game-text .O {
+  font-size: 6em;
+}
+.main-screen .title #prompt {
+  display: flex;
+  flex-direction: row;
+  font-size: 3em;
+}
+.main-screen .title #prompt #dif:after {
+  content: "|";
+  color: #a33465;
+  font-weight: bold;
+  -webkit-animation: blink 500ms ease-in-out infinite;
+          animation: blink 500ms ease-in-out infinite;
+  /* change margin to left if language is left to right */
+  margin-right: 5px;
+}
+@-webkit-keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  to {
+    opacity: 0;
+  }
+}
+.main-screen .title #prompt .selection {
+  display: flex;
+  flex-direction: row;
+}
+.main-screen .title #prompt .selection > * {
+  display: flex;
+  align-items: center;
+}
+.main-screen .title #prompt .selection i {
+  font-size: 0.8em;
+}
+.main-screen .title #prompt .selection i:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.main-screen .title button {
+  padding: 0.3em;
+  font-size: 2.5em;
+  background: transparent;
+  border: none;
+}
+.main-screen .title button:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  cursor: pointer;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("/assets/paper.jpg");
+}
+.flexbox .board {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.flexbox .grid {
+  background-color: transparent;
+  padding: 4em;
+  border: black 3px solid;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flexbox .grid:nth-child(1) {
+  border-top: none;
+  border-left: none;
+}
+.flexbox .grid:nth-child(2) {
+  border-top: none;
+}
+.flexbox .grid:nth-child(3) {
+  border-top: none;
+  border-right: none;
+}
+.flexbox .grid:nth-child(4) {
+  border-left: none;
+}
+.flexbox .grid:nth-child(6) {
+  border-right: none;
+}
+.flexbox .grid:nth-child(7) {
+  border-bottom: none;
+  border-left: none;
+}
+.flexbox .grid:nth-child(8) {
+  border-bottom: none;
+}
+.flexbox .grid:nth-child(9) {
+  border-right: none;
+  border-bottom: none;
+}
+.flexbox .grid:hover {
+  background-color: black;
+  opacity: 0.02;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  .stats {
+    top: 80%;
+  }
+}/*# sourceMappingURL=style.css.map */

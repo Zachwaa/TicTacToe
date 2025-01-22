@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naughts and Crosses</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3ca4990cc8.js" crossorigin="anonymous"></script>
+    <script src="/typing.js" defer></script>
+</head>
+<script
+    type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+<script src="/index.js" defer></script>
+<body>
+    <div id="settings">
+        <i class="fa-solid fa-gear"></i>
+    </div>
+    <div class= "stats">
+        Losing Streak: 
+        <span class="losingStreak">0</span>
+    </div>
+    <div class="main-screen">
+        <div class="title">
+            <div class="game-text"></div>
+            <div id ="prompt">
+                <p id="dif">Difficulty</p>
+                
+                <div class="selection">
+                    <i class="fa-solid fa-angle-left" id ="left"></i>
+                    <p id= "difficulty">easy</p>
+                    <i class="fa-solid fa-angle-right" id ="right"></i>
+                </div>
+            </div>
+            
+            <button id ="begin">
+                Begin Game
+            </button>
+        </div>
+    </div>
+    
+    <div class="flexbox">
+      
+        <div class= "board">
+            <div data-x ="1" data-y ="1" class="grid"></div>
+            <div data-x ="2" data-y ="1" class="grid"></div>
+            <div data-x ="3" data-y ="1" class="grid"></div>
+            <div data-x ="1" data-y ="2" class="grid"></div>
+            <div data-x ="2" data-y ="2" class="grid"></div>
+            <div data-x ="3" data-y ="2" class="grid"></div>
+            <div data-x ="1" data-y ="3"  class="grid"></div>
+            <div data-x ="2" data-y ="3" class="grid"></div>
+            <div data-x ="3" data-y ="3"  class="grid"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
